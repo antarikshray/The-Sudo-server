@@ -1,0 +1,86 @@
+Arguments: 
+  /home/asus/.nvm/versions/node/v10.16.1/bin/node /usr/share/yarn/bin/yarn.js start
+
+PATH: 
+  /home/asus/.nvm/versions/node/v10.16.1/bin:/opt/ros/melodic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+
+Yarn version: 
+  1.19.1
+
+Node version: 
+  10.16.1
+
+Platform: 
+  linux x64
+
+Trace: 
+  SyntaxError: /home/asus/Desktop/rudra/git_repo/GUI2020/package.json: Unexpected token r in JSON at position 1465
+      at JSON.parse (<anonymous>)
+      at /usr/share/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/share/yarn/lib/cli.js:304:30)
+      at /usr/share/yarn/lib/cli.js:315:13
+
+npm manifest: 
+  {
+    "name": "GUIinitiating..",
+    "engines": {
+      "node": "^10.16.1",
+      "npm": "6.9.0"
+    },
+    "description": "RUDRA GUI 2020",
+    "author": "Antariksh",
+    "version": "0.2.7",
+    "private": true,
+    "dependencies": {
+      "bootstrap": "^4.3.1",
+      "cross-env": "5.1.6",
+      "electron-is-dev": "^1.1.0",
+      "electron-log": "^2.2.6",
+      "leaflet": "^1.5.1",
+      "leaflet-mouse-position": "^1.2.0",
+      "leaflet-offline": "^1.1.0",
+      "localforage": "^1.7.3",
+      "node-env-run": "^3.0.2",
+      "npm-run-all": "^4.1.5",
+      "photon": "^2.1.0",
+      "prop-types": "^15.7.2",
+      "react": "^16.8.6",
+      "react-circular-progressbar": "^2.0.2",
+      "react-dom": "^16.8.6",
+      "react-leaflet": "^2.4.0",
+      "react-leaflet-control": "^2.1.1",
+      "react-modal": "^3.11.1",
+      "react-router-dom": "^4.2.2",
+      "react-sliding-pane": "^3.1.0",
+      "roslib": "^1.0.1",
+      "three": "^0.108.0",
+      "update-electron-app": "^1.2.0"
+    },
+    "devDependencies": {
+      "concurrently": "3.5.1",
+      "electron": "2.0.2",
+      "electron-builder": "^20.15.1",
+      "react-scripts": "1.1.4",
+      "wait-on": "2.1.0"
+    },
+    "build": {
+      "publish": {
+        "provider": "github"
+      }
+    },
+    "main": "public/electron.js",
+    "homepage": "./",
+    "scripts": {
+      "react-start": "react-scripts start",
+      "release": "yarn react-build && electron-builder --publish=always",
+      "start": "concurrently \"cross-env BROWSER=none yarn react-start\" \"wait-on http://localhost:3000 &&electron .\" "roslaunch rosbridge_server rosbridge_websocket.launch"",
+      "deploy": "gh-pages -d build"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
