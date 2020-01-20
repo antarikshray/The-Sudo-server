@@ -4,7 +4,7 @@
     "node": "^10.16.1",
     "npm": "6.9.0"
   },
-  "description": "The SUDO server",
+  "description": "Hospital",
   "author": "Antariksh",
   "version": "0.2.7",
   "private": true,
@@ -14,6 +14,7 @@
     "electron-is-dev": "^1.1.0",
     "electron-log": "^2.2.6",
     "electron-version": "^2.0.1",
+    "google-maps-react": "^2.0.2",
     "leaflet": "^1.5.1",
     "leaflet-mouse-position": "^1.2.0",
     "leaflet-offline": "^1.1.0",

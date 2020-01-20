@@ -7,6 +7,8 @@ import LeafletMap from './map';
 import Compas from './compass';
 //hidden slide panel
 import SlidingPannel from './SlidePannel';
+import Acceptance from './Acceptance';
+import Patient from './Patient';
 import '../css/vendor/photon-0.1.2-alpha/dist/css/photon.css';
 import '../css/custom.css';
 
@@ -25,21 +27,24 @@ export default class App extends Component {
 			<div className="window">
 	         <div className="window-content">
 	          <div className="pane-group" style={{border:'5px solid #abbfcf'}}>
-			   <div className="pane-one-fourth sidebar" style={{borderRight:'5px solid #abbfcf', overflowY: "hidden",overflowX: "hidden"}}>
-				<div style={{borderTop:'5px solid #abbfcf', borderBottom:'5px solid #abbfcf'}}>
-				</div>    
-				    <Compas />
+			   <div className="pane-one-fourth sidebar" style={{borderRight:'5px solid #abbfcf', overflowY: "hidden",overflowX: "hidden", backgroundColor:'#e3fdff'}}>
+			   		<div>
+					   <i class="fa fa-hospital-o" style={{marginLeft:'150px',marginTop:'20px' , fontSize:'100px'}}></i>
+					</div>
+					<Acceptance />
+					<Compas />
 		        </div>
-				<div className="pane" style={{borderRight:'5px solid #abbfcf', overflowX:"hidden", overflowY:"hidden"}}>
+				<div className="pane" style={{borderRight:'5px solid #abbfcf', overflowX:"hidden", overflowY:"hidden",  backgroundColor:'#f2f5ff'}}>
 				  <div style={{borderBottom:'5px solid #abbfcf'}}>	
 				  </div>
 				  <LeafletMap/>
 				  <div style={{borderTop:'5px solid #abbfcf'}}> 	
 				  </div>	
 				</div>
-			    <div className="pane-one-fourth sidebar" style={{overflowX: "hidden", overflowY: "hidden"}}>
+			    <div id="rightPane" className="pane-one-fourth" style={{overflowX: "hidden", overflowY: "hidden", backgroundColor:'#a0cafa'}}>
 					<SlidingPannel/>
-				<div style={{borderTop:'5px solid #abbfcf', borderBottom:'5px solid #abbfcf'}}>	
+					<Patient/>
+				<div style={{borderTop:'5px solid #abbfcf'}}>	
 				</div>
 				</div>
 	          </div>

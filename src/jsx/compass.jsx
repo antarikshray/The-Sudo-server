@@ -51,9 +51,6 @@ componentDidMount() {
   render() {
         return (
           <div>
-            <button onClick={this.show} className="btn btn-large btn-default">
-              display
-            </button>
     <div id="compass" className="compass">
       <div className="arrow" id="Needle"></div>
       <div className="bearing" id="bearneedle"></div>

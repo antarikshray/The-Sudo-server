@@ -297,7 +297,8 @@ h6 {
 }
 
 .sidebar {
-  background-image: url("./GUIbackg.jpg");
+  /* background-image: url("./GUIbackg.jpg"); */
+  background-image: linear-gradient(to bottom, #a0cafa, rgba(255,255,255,1)) !important;
 }
 
 .draggable {
@@ -654,7 +655,7 @@ textarea {
   flex: 1;
   /*border-left: 1px solid #ddd;*/
   /*background-color: #d1ebe9;*/
-  background-image: url("./GUIbackg.jpg");
+  /* background-image: url("./GUIbackg.jpg"); */
 }
 .pane:first-child {
   border-left: 0;
