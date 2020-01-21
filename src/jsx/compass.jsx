@@ -21,21 +21,6 @@ componentDidMount() {
     var bearNeedle = document.getElementById("bearneedle");
     bearNeedle.style.webkitTransform = "rotate("+ (bear) +"deg)";
     bearNeedle.style.transform = "rotate("+ (bear) +"deg)";  
-   
-   
-    if(window.ctr-ctr>0){
-    var map = document.querySelector('#map-id')._leaflet_map;
-      var point = L.marker([window.lat, window.lon]);
-      window.point.push(point);
-      L.Icon.Default.mergeOptions({
-        iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
-        iconUrl: require("../images/"+window.loc[(window.ctr-1)%5]),
-        shadowUrl: require('leaflet/dist/images/marker-shadow.png')
-      });
-      point.addTo(map);
-      window.log.push(window.lat+"  "+window.lon+" "+window.ID);
-      ctr=window.ctr;
-    }
 
   },10);
 }
